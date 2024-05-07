@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="card">
+    <div id="card" class="card  ">
         <div class="today-area">
             <div class="today-weather">
-                <p>내위치</p>
+                <p >내위치:<span class="my-local"></span></p>
                 <h1 class="today-temp">25°C</h1>
-                <p>맑음</p>
+                <p class="today-description">맑음</p>
             </div>
-            <div class="weather-img">
-                <img src="images/clear.png" alt="">
+            <div class="icon-area">
+                <img src="images/clear.png" class="today-weather-icon" alt="">
             </div>
-            
-
         </div>
+        <div class="today-error">No weather for you!</div>
+
         <div class="search">
             <input type="text" name="" id="" placeholder="enter city name" spellcheck="false">
             <button><img src="images/search.png" alt=""></button>

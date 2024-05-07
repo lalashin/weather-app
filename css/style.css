@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 body {
-    background: #222;
+    background: linear-gradient(135deg,#48cbff,#8cddfd);
+    height: 100vh;
+    padding: 40px 0;
 }
 
 .today-area {
@@ -13,7 +15,7 @@ body {
     justify-content: space-between;
 }
 .today-area h1{
-    font-size: 48px;
+    font-size: 42px;
 }
 
 .today-weather {
@@ -28,10 +30,29 @@ body {
     max-width: 470px;
     background: linear-gradient(135deg,#00feba, #5b548a) ;
     color: #fff;
-    margin: 50px auto 0;
+    margin: auto;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+    box-shadow: 0 17px 20px -18px rgba(0, 0, 0, 1);
+}
+.bgClouds {
+    background: linear-gradient(135deg,#4e93f2, #0068d2) ;
+}
+.bgClear {
+    background: linear-gradient(135deg,#47caff, #61d1fe) ;
+}
+.bgRain{
+    background: linear-gradient(135deg,#596cca, #334dba) ;
+}
+.bgSnow{
+    background: linear-gradient(135deg,#80d1fc, #2db3fc) ;
+}
+.bgDrizzle{
+    background: linear-gradient(135deg,#6ba6f6, #3486f5) ;
+}
+.bgMist{
+    background: linear-gradient(135deg,#9fdafa, #7dd0fc) ;
 }
 
 .search{
@@ -47,11 +68,11 @@ body {
     background: #dbfffc;
     color: #555;
     padding: 10px 25px;
-    height: 60px;
+    height: 40px;
     border-radius: 30px;
     flex: 1;
     margin-right: 16px;
-    font-style: 18px;
+    font-size: 18px;
 }
 
 .search button {
@@ -59,8 +80,8 @@ body {
     outline: 0;
     background: #dbfffc;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
 
@@ -113,4 +134,21 @@ body {
     margin-top: 10px;
     display: none;
 
+}
+
+.today-area {
+    display: none;
+    padding-bottom: 20px;
+}
+.today-error {
+    display: none;
+}
+
+.today-area .today-weather {float: left;}
+
+
+@media (max-width:768px) {
+    .search input {
+        width: calc(100% - 80px);
+    } 
 }
