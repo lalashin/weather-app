@@ -101,6 +101,13 @@ body {
 .search button img {
     width: 16px;
 }
+.weather{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 15px;
+    
+}
 .weather .top {
     display: flex;
     justify-content: center;
@@ -125,7 +132,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     padding: 0 20px;   
-    margin-top: 20px;
+    margin-top: 20px;     
 }
 .col{
     display: flex;
