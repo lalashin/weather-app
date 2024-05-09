@@ -1,5 +1,6 @@
 const apiKey ="0d7831c22f79d7464ced7b0431d91be7";
-const apiUrl ="https://api.openweathermap.org/data/2.5/weather?units=metric";
+const apiUrl ="https://api.openweathermap.org/data/2.5/";
+let url
 
 const cardBbColor = document.querySelector(".card");
 console.log(cardBbColor)
@@ -11,7 +12,8 @@ const temperature = document.querySelector(".today-temp");
 const place = document.querySelector(".my-local");
 const description = document.querySelector(".today-description");
 const weatherImg = document.querySelector(".today-weather-icon");
-const todayError = document.querySelector(".today-error")
+const todayError = document.querySelector(".today-error");
+
 
 const success = (position) => {
 
@@ -31,7 +33,8 @@ window.addEventListener('load', function(){
 });
 
 async function getWeather(lat,lon) {
-    const response = await fetch(apiUrl + `&lat=${lat}&lon=${lon}` + `&appid=${apiKey}`);
+    url = `${apiUrl}weather?units=metric&lat=${lat}&lon=${lon}&appid=${apiKey}`
+    const response = await fetch(url);
   
  
      if(response.status == 400) {
@@ -76,7 +79,8 @@ async function getWeather(lat,lon) {
 
 
 async function checkWeather(city) {
-    const response = await fetch(`${apiUrl}&q=` + city + `&appid=${apiKey}`);
+    url = `${apiUrl}weather?units=metric&q=${city}&appid=${apiKey}`
+    const response = await fetch(url);
 
     if(response.status == 404){
         document.querySelector(".error").style.display = "block";

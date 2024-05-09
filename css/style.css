@@ -5,24 +5,10 @@
     box-sizing: border-box;
 }
 body {
-    background: linear-gradient(135deg,#48cbff,#8cddfd);
+    background: linear-gradient(135deg,#76d2f7,#a2ddf5);
     height: 100vh;
     padding: 40px 0;
 }
-
-.today-area {
-    display: flex; 
-    justify-content: space-between;
-}
-.today-area h1{
-    font-size: 42px;
-}
-
-.today-weather {
-    text-align: left;
-}
-
-.weather-img img {width:150px ;}
 
 
 .card{
@@ -54,6 +40,33 @@ body {
 .bgMist{
     background: linear-gradient(135deg,#9fdafa, #7dd0fc) ;
 }
+
+.today-area {
+    display: flex; 
+    justify-content: space-between;
+}
+.today-area h1{
+    font-size: 42px;
+}
+
+.today-weather {
+    text-align: left;
+}
+.today-area {
+    display: none;
+    padding-bottom: 20px;
+}
+.today-error {
+    display: none;
+}
+
+.today-area .today-weather {float: left;}
+
+/* 
+.weather-img img {width:150px ;} */
+
+
+
 
 .search{
     width: 100%;
@@ -88,25 +101,31 @@ body {
 .search button img {
     width: 16px;
 }
+.weather .top {
+    display: flex;
+    justify-content: center;
+}
+
 .weather-icon {
     width: 170px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .weather h1{
     font-size: 80px;
     font-weight: 500;
+    margin-top: 10px;
 }
 .weather h2{
     font-size: 45px;
     font-weight: 400;
-    margin-top: -10px;
+    margin-top: -20px;
 }
 .details {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0 20px;   
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .col{
     display: flex;
@@ -136,19 +155,77 @@ body {
 
 }
 
-.today-area {
-    display: none;
-    padding-bottom: 20px;
-}
-.today-error {
-    display: none;
-}
 
-.today-area .today-weather {float: left;}
 
 
 @media (max-width:768px) {
+    
     .search input {
         width: calc(100% - 80px);
     } 
+
+
+    
+.weather-icon {
+    width: 22.1354vw;
+    margin-top: 1.3021vw;
+}
+.weather h1{
+    font-size: 10.4167vw;
+    font-weight: 500;
+    margin-top: 1.3021vw;
+}
+.weather h2{
+    font-size: 5.8594vw;
+    font-weight: 400;
+    margin-top: -2.6042vw;
+}
+.details {
+   
+    padding: 0 2.6042vw;   
+    margin-top: 2.6042vw;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img {
+    width: 5.2083vw;
+    margin-right: 1.3021vw;
+}
+
+.humidity, .wind {
+    font-size: 3.6458vw;
+    margin-top: -0.7813vw;
+}
+
+.weather {
+    display: none;
+}
+
+.error {   
+    text-align: left;
+    margin-left: 1.3021vw;
+    font-style: 1.8229vw;
+    margin-top: 1.3021vw;
+    display: none;
+
+}
+
+    
+    
+}
+
+@media (max-width:360px) {
+
+    .today-description {margin-top: -15px;}
+    .icon-area {float: right;}
+    .icon-area img {width: 100px;}
+
+    
+}
+
+@media (max-width:320px) {
+    .icon-area img {width: 25.0000vw;}
 }
